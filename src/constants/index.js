@@ -1,5 +1,5 @@
-const ACTIONS_LIST = 'actions-list';
+const ACTIONS_LIST = "ac:::actions-list";
 
 module.exports = {
-  ACTIONS_LIST
-}
+  ACTIONS_LIST,
+};
