@@ -1,5 +1,5 @@
 {
-  "name": "actions-cli",
+  "name": "a-cli",
   "version": "1.0.0",
   "description": "A Node.js CLI command to keep track of your actions items for each day",
   "main": "index.js",
