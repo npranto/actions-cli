@@ -4,7 +4,7 @@
   "description": "A Node.js CLI command to keep track of your actions items for each day",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "npx prettier --write ."
   },
   "keywords": [
     "nodejs",
@@ -20,5 +20,8 @@
   },
   "bin": {
     "actions": "./index.js"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
   }
 }

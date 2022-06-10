@@ -1,15 +1,15 @@
-const { program } = require('commander');
-const chalk = require('chalk');
-const config = require('../config');
-const { ACTIONS_LIST } = require('../constants');
-const listActionItems = require('./listActionItems');
+const { program } = require("commander");
+const chalk = require("chalk");
+const config = require("../config");
+const { ACTIONS_LIST } = require("../constants");
+const listActionItems = require("./listActionItems");
 
 function markDoneActionItems(options = {}) {
   const { last = false, all = false, items } = options;
   const existingActions = config.get(ACTIONS_LIST) || [];
   if (!existingActions || !existingActions.length) {
     console.log(
-      chalk.green('Looks like you don\'t have any action items right now 👌')
+      chalk.green("Looks like you don't have any action items right now 👌")
     );
   } else if (last) {
     const markedActionsList = existingActions.map((action, index) => {
@@ -17,14 +17,14 @@ function markDoneActionItems(options = {}) {
         return {
           ...action,
           complete: true,
-        }
+        };
       }
       return action;
-    })
+    });
     config.set(ACTIONS_LIST, markedActionsList);
     console.log(
-      chalk.green('✅ Most recent action item has been marked complete!\n')
-    )
+      chalk.green("✅ Most recent action item has been marked complete!\n")
+    );
     listActionItems();
   } else if (items) {
     if (!Array.isArray(items) || !items.length) {
@@ -35,28 +35,28 @@ function markDoneActionItems(options = {}) {
           return {
             ...action,
             complete: true,
-          }
+          };
         }
         return action;
-      })
+      });
       config.set(ACTIONS_LIST, markedActionsList);
       console.log(
-        chalk.green(`✅ [${items.join(', ')}] action ids have been marked complete!\n`)
-      )
+        chalk.green(
+          `✅ [${items.join(", ")}] action ids have been marked complete!\n`
+        )
+      );
       listActionItems();
     }
   } else if (all) {
-      const markedActionsList = existingActions.map((action, i) => {
-        return {
-          ...action,
-          complete: true,
-        }
-      })
-      config.set(ACTIONS_LIST, markedActionsList);
-      console.log(
-        chalk.green(`All actions have been marked not complete!\n`)
-      )
-      listActionItems();
+    const markedActionsList = existingActions.map((action, i) => {
+      return {
+        ...action,
+        complete: true,
+      };
+    });
+    config.set(ACTIONS_LIST, markedActionsList);
+    console.log(chalk.green(`All actions have been marked not complete!\n`));
+    listActionItems();
   } else {
     program.help();
   }
