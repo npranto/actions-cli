@@ -18,7 +18,7 @@ program
 program
   .command("add <actions...>")
   .description(
-    'Add new action item(s), i.e., `actions add "buy milk" "do homework"`'
+    'Add new action item(s), i.e., `actions add "buy milk" "do homework"` (adds 2 new action items to your list)'
   )
   .action(addActionItem);
 
@@ -37,7 +37,7 @@ program
 program
   .command("done")
   .description(
-    "Marks action item(s) as complete\ni.e.\n- `actions done --all` (marks all the action items as complete)\n- `actions done --last` (Marks the most recent action item as complete)\n- `actions done --items 2 3` (marks the provided action ids as done, in this case, ids 2 and 3)"
+    "Marks action item(s) as complete\ni.e.\n- `actions done --all` (marks all the action items as complete)\n- `actions done --last` (marks the most recent action item as complete)\n- `actions done --items 2 3` (marks the provided action ids as done, in this case, ids 2 and 3)"
   )
   .option("-a, --all", "Marks all the action items as complete")
   .option("-l, --last", "Marks the most recent action item as complete")
@@ -50,7 +50,7 @@ program
 program
   .command("undone")
   .description(
-    "Marks action item(s) as complete\ni.e.\n- `actions undone --all` (marks all the action items as not complete)\n- `actions undone --last` (Marks the most recent action item as not complete)\n- `actions undone --items 2 3` (marks the provided action ids as not done, in this case, ids 2 and 3)"
+    "Marks action item(s) as complete\ni.e.\n- `actions undone --all` (marks all the action items as not complete)\n- `actions undone --last` (marks the most recent action item as not complete)\n- `actions undone --items 2 3` (marks the provided action ids as not done, in this case, ids 2 and 3)"
   )
   .option("-a, --all", "Marks all the action items as not complete")
   .option("-l, --last", "Marks the most recent action item as not complete")
