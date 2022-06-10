@@ -22,7 +22,6 @@ function validateDate(date) {
 }
 
 function filterActionItems(options = {}) {
-  console.log(options);
   const { date, includes } = options;
   const allActions = config.get(ACTIONS_LIST);
 
