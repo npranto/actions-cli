@@ -6,7 +6,7 @@ A Node.js CLI command to keep track of your actions items for each day
 
 1. Install `actions-cli` globally on your machine
 ```sh
-npm install a-cli -g
+npm install @npranto/actions-cli -g
 ```
 
 2. Start using the CLI to keep track of all your action items or todos
