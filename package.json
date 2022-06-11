@@ -1,6 +1,6 @@
 {
   "name": "@npranto/actions-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command line CLI to keep track of your actions items for each day",
   "main": "index.js",
   "scripts": {
