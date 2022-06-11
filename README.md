@@ -1,6 +1,12 @@
-# actions-cli
+<div align="center">
+  <a href="https://npranto.dev/">
+    <img src="./assets/actions-cli-logo-80.gif" alt="Cover" width="80" height="80">
+  </a>
 
-A Node.js CLI command to keep track of your actions items for each day
+  <h2 align="center">actions-cli</h2>
+</div>
+
+> A command line CLI to keep track of your actions items for each day
 
 ## Installation
 
