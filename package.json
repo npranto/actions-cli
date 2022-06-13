@@ -1,27 +1,33 @@
 {
-  "name": "@npranto/actions-cli",
-  "version": "1.0.1",
-  "description": "A command line CLI to keep track of your actions items for each day",
-  "main": "index.js",
-  "scripts": {
-    "format": "npx prettier --write ."
-  },
-  "keywords": [
-    "nodejs",
-    "cli",
-    "actions"
-  ],
-  "author": "Nazmuz Pranto <npranto@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^4.0.0",
-    "commander": "^9.3.0",
-    "conf": "^10.1.2"
-  },
-  "bin": {
-    "actions": "./index.js"
-  },
-  "devDependencies": {
-    "prettier": "^2.6.2"
-  }
+	"name": "@npranto/actions-cli",
+	"version": "1.0.1",
+	"description": "A command line CLI to keep track of your actions items for each day",
+	"main": "index.js",
+	"scripts": {
+		"lint": "npx eslint ./",
+		"format": "npx prettier --write ."
+	},
+	"keywords": [
+		"nodejs",
+		"cli",
+		"actions"
+	],
+	"author": "Nazmuz Pranto <npranto@gmail.com>",
+	"license": "ISC",
+	"dependencies": {
+		"chalk": "^4.0.0",
+		"commander": "^9.3.0",
+		"conf": "^10.1.2"
+	},
+	"bin": {
+		"actions": "./index.js"
+	},
+	"devDependencies": {
+		"eslint": "^8.17.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"husky": "^8.0.1",
+		"prettier": "^2.6.2"
+	}
 }
